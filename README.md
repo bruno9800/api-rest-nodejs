@@ -1,7 +1,6 @@
 # RF _requisitos funcionais_
 
 - [x] O usuário deve poder criar uma nova transação
-- [ ] O usuário deve poder modificar uma transação
 - [x] O usuário deve obter um resumo da sua conta
 - [x] O usuário deve poder listar todas as transações que já ocorreram
 - [x] O usuário deve poder visualizar uma transação única
@@ -28,3 +27,17 @@
 
 - Vitest -D
 - supertest -D
+
+# Deploy Render
+[backend](https://ignite-api-nodejs-transactions.onrender.com/)
+
+ ## Rotas
+  - "/transactions"
+    - [POST] = Cria uma transação. _obs: na primeiro POST a sessão é iniciada_
+    - [GET] = Lista todas as transações da sessão
+  - "/transactions/:id"
+  Retorna apenas uma transação com o mesmo id passado pelo parâmetro 
+  - "/transactions/summary"
+  Resumo das transações criadas durante a sessão
+
+
